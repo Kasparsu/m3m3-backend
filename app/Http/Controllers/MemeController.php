@@ -16,7 +16,7 @@ class MemeController extends Controller
      */
     public function index()
     {
-        return Meme::with(['image', 'user'])->paginate(10);
+        return Meme::with(['image', 'user', 'tags'])->orderBy('created_at', 'desc')->paginate(10);
     }
 
     /**

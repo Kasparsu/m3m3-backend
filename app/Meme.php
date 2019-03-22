@@ -17,7 +17,7 @@ class Meme extends Model
         return $this->hasMany(Comment::class);
     }
     public function tags(){
-        return  $this->hasMany(Tag::class);
+        return  $this->belongsToMany(Tag::class);
     }
     public function category(){
         return  $this->hasOne(Category::class);
