@@ -15,7 +15,7 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('content');
+            $table->text('content');
             $table->unsignedBigInteger('meme_id');
             $table->foreign('meme_id')->references('id')->on('memes');
             $table->timestamps();
